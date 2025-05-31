@@ -6,7 +6,7 @@ import React, { useState, useEffect } from 'react';
 const navigationLinks = [
     { id: '1', title: 'CONTENIDO', link: '/contenidos' },
     { id: '2', title: 'SANTUARIO ROJIBLANCO', link: '/santuarioroji' },
-    { id: '3', title: 'SUSCRIPCIONES', link: '/suscripciones' },
+    { id: '3', title: 'SUSCRIPCIONES', link: '/suscripcion' },
 ];
 
 const authenticatedLinks = [

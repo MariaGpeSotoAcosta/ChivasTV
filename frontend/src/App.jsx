@@ -6,7 +6,8 @@ import Registro from './Registro'
 import PaginaUsuario from './PaginaUsuario'
 import SantuarioRoji from './SantuarioRoji'
 import VideoPage from './videolay'
-import Navbar from './NavBar'
+import Navbar from './NavBar'   
+import Suscripcion from './suscripcion'
 
 const AppContent = () => {
   const location = useLocation();
@@ -22,6 +23,7 @@ const AppContent = () => {
         <Route path="/inicio-user" element={<PaginaUsuario />} />
         <Route path="/santuarioroji" element={<SantuarioRoji />} />
         <Route path="/video/:id" element={<VideoPage />} />
+        <Route path="/suscripcion" element={<Suscripcion />} />
       </Routes>
     </>
   );
