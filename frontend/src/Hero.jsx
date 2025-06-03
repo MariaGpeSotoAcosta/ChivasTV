@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa"; //para las flechas
 
+//imagenes
 import image1 from "./assets/chivas2.jpg";
 import image2 from "./assets/chivas3.jpg";
 import image3 from "./assets/chivas4.jpg";
@@ -28,13 +29,12 @@ function Hero() {
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) =>
-      (prevIndex + 1) % images.length
+      prevIndex === images.length - 1 ? 0 : prevIndex + 1
     );
   };
 
   return (
     <div className="relative w-full min-h-[300px] h-screen overflow-hidden">
-      {/* Imágenes */}
       <div className="absolute inset-0 w-full h-full z-10">
         {images.map((img, index) => (
           <img
@@ -51,20 +51,20 @@ function Hero() {
       {/* Flechas */}
       <button
         onClick={prevSlide}
-        className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 text-white p-3 rounded-full z-50 hover:bg-black/70"
+        className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 text-white p-3 rounded-full z-40 hover:bg-black/70"
         aria-label="Anterior"
       >
         <FaChevronLeft size={24} />
       </button>
+
       <button
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 text-white p-3 rounded-full z-50 hover:bg-black/70"
+        className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 text-white p-3 rounded-full z-40 hover:bg-black/70"
         aria-label="Siguiente"
       >
         <FaChevronRight size={24} />
       </button>
 
-      {/* Indicadores */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex gap-2 z-50 bg-black/30 px-4 py-2 rounded-full">
         {images.map((_, index) => (
           <div

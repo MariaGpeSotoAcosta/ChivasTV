@@ -2,6 +2,7 @@ import React, { useRef, useState, useEffect } from "react";
 import { Link } from "react-router-dom"; // Import Link for routing
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa"; //para las flechas
 
+//imagenes
 import image1 from "./assets/chivas2.jpg";
 import image2 from "./assets/chivas3.jpg";
 import image3 from "./assets/chivas4.jpg";
@@ -70,7 +71,7 @@ function VideoCarousel() {
         {showLeft && (
           <button
             onClick={() => scroll("left")}
-            className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 text-white p-3 rounded-full z-20 hover:bg-black/70"
+            className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 text-white p-3 rounded-full z-40 hover:bg-black/70"
           >
             <FaChevronLeft size={20} />
           </button>
@@ -104,7 +105,7 @@ function VideoCarousel() {
         {showRight && (
           <button
             onClick={() => scroll("right")}
-            className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 text-white p-3 rounded-full z-20 hover:bg-black/70"
+            className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 text-white p-3 rounded-full z-40 hover:bg-black/70"
           >
             <FaChevronRight size={20} />
           </button>
