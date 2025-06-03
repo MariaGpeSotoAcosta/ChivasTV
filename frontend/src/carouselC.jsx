@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { Link } from "react-router-dom"; // Import Link for routing
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa"; //para las flechas
 
 import image1 from "./assets/chivas2.jpg";
 import image2 from "./assets/chivas3.jpg";
