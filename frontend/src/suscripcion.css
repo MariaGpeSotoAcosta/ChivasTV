@@ -277,3 +277,9 @@ body {
     white-space: nowrap; /* Evitar que el texto se divida en múltiples líneas */
     font-size: 15px; /* Ligeramente más pequeño para asegurar que quepa */
 }
+
+/* Para que no se pueda hacer scroll */
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
