@@ -124,7 +124,7 @@ function App() {
                 <div className="flex flex-col">
                   <label className="text-white/80 text-sm mb-1">Idioma</label>
                   <select
-                    className="w-full bg-white/10 border border-white/20 rounded-lg p-3 text-white focus:outline-none focus:ring-2 focus:ring-red-500"
+                    className="w-full bg-white/10 border border-white/20 rounded-lg p-3 text-white focus:outline-none focus:ring-2 focus:ring-red-500 appearance-none"
                     onChange={e => setValues({ ...values, idioma: e.target.value })}
                     value={values.idioma}
                   >
@@ -189,7 +189,7 @@ function App() {
                 <div className="flex flex-col">
                   <label className="text-white/80 text-sm mb-1">Género</label>
                   <select
-                    className="w-full bg-white/10 border border-white/20 rounded-lg p-3 text-white focus:outline-none focus:ring-2 focus:ring-red-500"
+                    className="w-full bg-white/10 border border-white/20 rounded-lg p-3 text-white focus:outline-none focus:ring-2 focus:ring-red-500 appearance-none"
                     onChange={e => setValues({ ...values, genero: e.target.value })}
                     value={values.genero}
                   >
