@@ -8,6 +8,7 @@ import SantuarioRoji from './SantuarioRoji'
 import VideoPage from './videolay'
 import Navbar from './NavBar'   
 import Suscripcion from './suscripcion'
+import Configuracion from './configuracion'
 
 const AppContent = () => {
   const location = useLocation();
@@ -24,6 +25,7 @@ const AppContent = () => {
         <Route path="/santuarioroji" element={<SantuarioRoji />} />
         <Route path="/video/:id" element={<VideoPage />} />
         <Route path="/suscripcion" element={<Suscripcion />} />
+        <Route path="/configuracion" element={<Configuracion />} />
       </Routes>
     </>
   );
