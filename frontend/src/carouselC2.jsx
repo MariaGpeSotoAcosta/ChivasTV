@@ -20,7 +20,8 @@ const carouselItems = [
   { image: image6, title: "HISTORIAS", id: 6 },
 ];
 
-function CarouselC() {
+
+function CarouselC2() {
   const scrollRef = useRef(null);
   const [showLeft, setShowLeft] = useState(false);
   const [showRight, setShowRight] = useState(true);
@@ -115,4 +116,4 @@ function CarouselC() {
   );
 }
 
-export default CarouselC;
+export default CarouselC2;
