@@ -24,7 +24,7 @@ function App() {
 
   // Lista países y estados
   const paises = [
-    { nombre: 'México', estados: ['Ciudad de México', 'Jalisco', 'Nuevo León', 'Puebla', 'Yucatán'] },
+    { nombre: 'México', estados: ['Aguascalientes', 'Baja California', 'Baja California Sur', 'Campeche', 'Chiapas', 'Chihuahua', 'Ciudad de México', 'Coahuila', 'Colima', 'Durango', 'Estado de México', 'Guanajuato', 'Guerrero', 'Hidalgo', 'Jalisco', 'Michoacán', 'Morelos', 'Nayarit', 'Nuevo León', 'Oaxaca', 'Puebla', 'Querétaro', 'Quintana Roo', 'San Luis Potosí', 'Sinaloa', 'Sonora', 'Tabasco', 'Tamaulipas', 'Tlaxcala', 'Veracruz', 'Yucatán', 'Zacatecas'] },
     { nombre: 'Argentina', estados: ['Buenos Aires', 'Córdoba', 'Santa Fe'] },
     { nombre: 'Brasil', estados: ['São Paulo', 'Rio de Janeiro', 'Bahia'] },
     { nombre: 'España', estados: ['Madrid', 'Cataluña', 'Andalucía'] },
@@ -124,7 +124,7 @@ function App() {
                 <div className="flex flex-col">
                   <label className="text-white/80 text-sm mb-1">Idioma</label>
                   <select
-                    className="w-full bg-white/10 border border-white/20 rounded-lg p-3 text-white focus:outline-none focus:ring-2 focus:ring-red-500 appearance-none"
+                    className="w-full bg-white/10 border border-white/20 rounded-lg p-3 text-gray-500 focus:outline-none focus:ring-2 focus:ring-red-500 appearance-none"
                     onChange={e => setValues({ ...values, idioma: e.target.value })}
                     value={values.idioma}
                   >
@@ -139,7 +139,7 @@ function App() {
                   <label className="text-white/80 text-sm mb-1">Fecha de nacimiento</label>
                   <input
                     type="date"
-                    className="w-full bg-white/10 border border-white/20 rounded-lg p-3 text-white focus:outline-none focus:ring-2 focus:ring-red-500 [&::-webkit-calendar-picker-indicator]:invert"
+                    className="w-full bg-white/10 border border-white/20 rounded-lg p-3 text-gray-500 focus:outline-none focus:ring-2 focus:ring-red-500 [&::-webkit-calendar-picker-indicator]:invert"
                     onChange={e => setValues({ ...values, cumpleaños: e.target.value })}
                   />
                 </div>
@@ -149,7 +149,7 @@ function App() {
                   <label className="text-white/80 text-sm mb-1">Teléfono</label>
                   <input
                     type="tel"
-                    className="w-full bg-white/10 border border-white/20 rounded-lg p-3 text-white focus:outline-none focus:ring-2 focus:ring-red-500"
+                    className="w-full bg-white/10 border border-white/20 rounded-lg p-3 text-gray-500 focus:outline-none focus:ring-2 focus:ring-red-500"
                     onChange={e => setValues({ ...values, telefono: e.target.value })}
                   />
                 </div>
@@ -158,7 +158,7 @@ function App() {
                 <div className="flex flex-col">
                   <label className="text-white/80 text-sm mb-1">País</label>
                   <select
-                    className="w-full bg-white/10 border border-white/20 rounded-lg p-3 text-white focus:outline-none focus:ring-2 focus:ring-red-500 appearance-none"
+                    className="w-full bg-white/10 border border-white/20 rounded-lg p-3 text-gray-500 focus:outline-none focus:ring-2 focus:ring-red-500 appearance-none"
                     value={values.pais}
                     onChange={e => setValues({ ...values, pais: e.target.value, estado: '' })}
                   >
@@ -173,7 +173,7 @@ function App() {
                 <div className="flex flex-col">
                   <label className="text-white/80 text-sm mb-1">Estado</label>
                   <select
-                    className="w-full bg-white/10 border border-white/20 rounded-lg p-3 text-white focus:outline-none focus:ring-2 focus:ring-red-500 appearance-none"
+                    className="w-full bg-white/10 border border-white/20 rounded-lg p-3 text-gray-500 focus:outline-none focus:ring-2 focus:ring-red-500 appearance-none"
                     value={values.estado}
                     onChange={e => setValues({ ...values, estado: e.target.value })}
                     disabled={!values.pais}
@@ -189,7 +189,7 @@ function App() {
                 <div className="flex flex-col">
                   <label className="text-white/80 text-sm mb-1">Género</label>
                   <select
-                    className="w-full bg-white/10 border border-white/20 rounded-lg p-3 text-white focus:outline-none focus:ring-2 focus:ring-red-500 appearance-none"
+                    className="w-full bg-white/10 border border-white/20 rounded-lg p-3 text-gray-500 focus:outline-none focus:ring-2 focus:ring-red-500 appearance-none"
                     onChange={e => setValues({ ...values, genero: e.target.value })}
                     value={values.genero}
                   >
