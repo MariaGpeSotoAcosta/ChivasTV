@@ -29,7 +29,7 @@ function NavBar() {
             .then(res => {
                 if (res.data.Status === "DONE!") {
                     setAuth(true);
-                  setName(res.data.name || res.data.nombre  );
+                    setName(res.data.name || res.data.nombre);
                 } else {
                     setAuth(false);
                     setMessage(res.data.Error);
@@ -118,7 +118,8 @@ function NavBar() {
                         <li>
                             <Link
                                 to='/registro'
-                                className='bg-black hover:bg-gray-800 text-white px-3 py-1 rounded-sm'
+                                className='bg-[#7D191E] hover:bg-[#5D1217] text-white px-3 py-1 rounded-full'
+
                             >
                                 Regístrate
                             </Link>
