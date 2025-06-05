@@ -2,6 +2,7 @@ import React,{useState,useEffect} from 'react'
 import { useNavigate } from 'react-router-dom'
 import Hero from './Hero'
 import CarouselC from './carouselC'
+import CarouselC2 from './carouselC2';
 import './index.css'
 import {Link} from 'react-router-dom'
 import axios from 'axios'
@@ -10,9 +11,9 @@ import axios from 'axios'
 function App() {
   const navigate = useNavigate();
   axios.defaults.withCredentials = true;
-  const [auth,setAuth] = useState(false);
+  const [auth,setAuth] = useState(true);
   const [message,setMessage] = useState('')
-  const [nombre,setName]= useState('')
+  const [nombre,setName]= useState('Ana')
 
   const handleLogout = () => {
     axios.get('http://localhost:3000/logout')
@@ -48,40 +49,26 @@ function App() {
 },[]);
 
 
+
   return (
     <div className="relative min-h-screen overflow-hidden">
-     { 
-      auth ?
-      <div>
-        
-      <div className="app-container relative top-[60px]">
-      
-        
-        
-        
-        <Hero />
-        <div className=" bg-black  h-[30px]">
-
+      {auth ? (
+        <div>
+          <div className="app-container relative top-[60px]">
+            <Hero />
+            <div className="bg-black h-[30px]" />
+            <CarouselC />
+            <div className="bg-black h-[5px]" />
+            <CarouselC2 />
+          </div>
+          <div className="bg-white h-[60px]" />
         </div>
-        <CarouselC />
-        
-      </div>
-      <div className=" bg-white  h-[60px]">
-
+      ) : (
+        <div className='mt-[300px]'>
+          {message}
+          <Link to='/iniciarsesion'>Login</Link>
         </div>
-
-      </div>
-      :
-
-      
-      <div className='mt-[300px]'>
-        {message}
-        navigate('/')
-
-        <Link to = '/iniciarsesion' >Login</Link>
-      </div>
-
-     }
+      )}
     </div>
   );
 }
