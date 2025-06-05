@@ -58,7 +58,7 @@ function App() {
             <Hero />
             <div className="bg-black h-[30px]" />
             <CarouselC />
-            <div className="h-10" />
+            <div className="bg-black h-[5px]" />
             <CarouselC2 />
           </div>
           <div className="bg-white h-[60px]" />

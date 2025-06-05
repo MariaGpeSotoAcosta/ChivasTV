@@ -65,6 +65,8 @@ function CarouselC2() {
       {/* Fondo */}
       <div className="absolute inset-0 overflow-hidden">
         <img src={image8} className="w-full h-full object-cover" alt="background" />
+        {/* Degradado superior */}
+        <div className="absolute top-0 left-0 w-full h-52 bg-gradient-to-b from-black/90 to-transparent z-10" />
       </div>
 
       <div className="relative z-10 py-8">
@@ -89,7 +91,7 @@ function CarouselC2() {
                 <img
                   src={item.image}
                   alt={`Slide ${index}`}
-                  className="w-full h-full object-cover rounded-xl cursor-pointer shadow-lg border-2 border-white group-hover:scale-95 transition-transform duration-300"
+                  className="w-full h-full object-cover rounded-xl cursor-pointer shadow-lg  group-hover:scale-95 transition-transform duration-300"
                 />
                 <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 w-[90%] bg-indigo-800/90 rounded-[40px] flex items-center justify-center py-2">
                   <p className="text-white text-xl font-bold">
