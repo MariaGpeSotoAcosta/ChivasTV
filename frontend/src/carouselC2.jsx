@@ -9,7 +9,8 @@ import image3 from "./assets/chivas4.jpg";
 import image4 from "./assets/chivas5.jpg";
 import image5 from "./assets/chivas6.jpg";
 import image6 from "./assets/chivas7.jpg";
-import image8 from "./assets/chivas8.jpg";
+import fondo from "./assets/fondoCarousel2.png";
+import chivasFemenil from "./assets/chivasFemenil.png";
 
 const carouselItems = [
   { image: image1, title: "PARTIDO 1", id: 1 },
@@ -61,15 +62,23 @@ function CarouselC2() {
   }, []);
 
   return (
-    <div className="relative w-full">
+    <div className="relative w-full h-[430px]">
       {/* Fondo */}
-      <div className="absolute inset-0 overflow-hidden">
-        <img src={image8} className="w-full h-full object-cover" alt="background" />
+      <div className="absolute inset-0">
+        <img src={fondo} className="w-full h-full object-cover" alt="background" />
         {/* Degradado superior */}
-        <div className="absolute top-0 left-0 w-full h-52 bg-gradient-to-b from-black/90 to-transparent z-10" />
+        <div className="absolute top-0 left-0 w-full h-52 bg-gradient-to-b from-black/100 to-transparent z-30" />
+      {/* Degradado inferior */}
+        <div className="absolute bottom-0 w-full h-32 bg-gradient-to-t from-black via-transparent to-transparent z-30" />
+      </div>
+      {/* Imagen titulo CHIVAS FEMENIL */}
+      <div className="absolute top-5 right-12 z-30">
+        <img src={chivasFemenil} alt="Chivas Femenil"
+          className="w-[270px] h-auto object-contain"
+        />
       </div>
 
-      <div className="relative z-10 py-8">
+      <div className="relative z-10 py-8 top-15">
         {/* Flecha izquierda */}
         {showLeft && (
           <button

@@ -7,8 +7,8 @@ import image1 from "./assets/entrevista1.png";
 import image2 from "./assets/entrevista2.png";
 import image3 from "./assets/entrevista3.png";
 import image4 from "./assets/entrevista4.png";
-import image5 from "./assets/chivas6.jpg";
-import image6 from "./assets/chivas7.jpg";
+import image5 from "./assets/entrevista5.png";
+import image6 from "./assets/entrevista6.png";
 import elPodcast from "./assets/elPodcast.jpg";
 
 const carouselItems = [
