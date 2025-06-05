@@ -110,7 +110,7 @@ function NavBar() {
                         <li>
                             <Link
                                 to='/iniciarsesion'
-                                className='ml-[100px] bg-[#005A9C] hover:bg-[#004687] text-white px-3 py-1 rounded-sm'
+                                className='bg-black hover:bg-gray-800 text-white px-3 py-1 rounded-sm'
                             >
                                 Iniciar Sesión
                             </Link>
