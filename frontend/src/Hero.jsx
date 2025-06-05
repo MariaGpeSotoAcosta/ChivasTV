@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa"; //para las flechas
 
 //imagenes
-import image1 from "./assets/chivas2.jpg";
-import image2 from "./assets/chivas3.jpg";
+import image1 from "./assets/pagPrincipal1.png";
+import image2 from "./assets/pagPrincipal2.png";
 import image3 from "./assets/chivas4.jpg";
 import image4 from "./assets/chivas5.jpg";
 import image5 from "./assets/chivas6.jpg";
@@ -34,7 +34,7 @@ function Hero() {
   };
 
   return (
-    <div className="relative w-full min-h-[300px] h-screen overflow-hidden">
+    <div className="relative w-full h-[600px] overflow-hidden">
       <div className="absolute inset-0 w-full h-full z-10">
         {images.map((img, index) => (
           <img
@@ -46,6 +46,8 @@ function Hero() {
             }`}
           />
         ))}
+        {/* Degradado inferior */}
+        <div className="absolute bottom-0 w-full h-32 bg-gradient-to-t from-black via-transparent to-transparent z-20" />
       </div>
 
       {/* Flechas */}
