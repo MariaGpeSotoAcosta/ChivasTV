@@ -54,7 +54,7 @@ function App() {
     <div className="relative min-h-screen overflow-hidden">
       {auth ? (
         <div>
-          <div className="app-container relative top-[60px]">
+          <div className="app-container relative top-[50px]">
             <Hero />
             <div className="bg-black h-[30px]" />
             <CarouselC />

@@ -2,7 +2,7 @@ import React,{useState} from 'react'
 import './suscripcion.css'
 import { useNavigate } from 'react-router-dom'
 import logochivas from './assets/chivaslogo.png'
-import footerImage from './assets/foot.png.png'
+import footerImage from './assets/foot.png'
 
 // Componente para el cuadro con gradiente
 const CuadroGradiente = ({ titulo, precio, descripcion, buttonText, navigate, path, className }) => {

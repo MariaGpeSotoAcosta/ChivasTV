@@ -1,5 +1,5 @@
 import { Link, useNavigate, useLocation } from 'react-router-dom';
-import logo1 from './assets/chivaslogoTV.png';
+import logo1 from './assets/prueba.png';
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 
@@ -52,12 +52,11 @@ function NavBar() {
     };
 
     return (
-        <div className='fixed left-0 right-0 z-50 bg-black flex items-center h-[60px] '>
-            
+        <div className='fixed left-0 right-0 z-50 bg-black flex items-center h-[50px] '>
             <Link to={auth ? '/inicio-user' : '/'} className='text-white'>
-                <img src={logo1} alt='Logo' width={210} height={60} />
+                <img src={logo1} alt='Logo' width={250} height={190} />
             </Link>
-           
+
             <ul className='flex gap-x-24 mr-32 text-white ml-auto'>
                 {auth
                     ? authenticatedLinks.map((authLink, index) => (
