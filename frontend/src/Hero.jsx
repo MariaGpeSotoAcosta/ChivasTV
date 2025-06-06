@@ -3,13 +3,11 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa"; //para las flech
 
 //imagenes
 import image1 from "./assets/pagPrincipal1.png";
-import image2 from "./assets/chivas3.jpg";
-import image3 from "./assets/chivas4.jpg";
-import image4 from "./assets/chivas5.jpg";
-import image5 from "./assets/chivas6.jpg";
-import image6 from "./assets/chivas7.jpg";
+import image2 from "./assets/pagPrincipal2.png";
+import image3 from "./assets/pagPrincipal3.png";
+import image4 from "./assets/pagPrincipal4.png";
 
-const images = [image1, image2, image3, image4, image5]; // Usamos 5 imágenes
+const images = [image1, image2, image3, image4];
 
 function Hero() {
   const [currentIndex, setCurrentIndex] = useState(0);

@@ -9,6 +9,9 @@ import image3 from "./assets/entrevista3.png";
 import image4 from "./assets/entrevista4.png";
 import image5 from "./assets/entrevista5.png";
 import image6 from "./assets/entrevista6.png";
+import image7 from "./assets/entrevista7.png";
+import image8 from "./assets/entrevista8.png";
+import image9 from "./assets/entrevista9.png";
 import elPodcast from "./assets/elPodcast.jpg";
 
 const carouselItems = [
@@ -18,6 +21,9 @@ const carouselItems = [
   { image: image4, id: 4 },
   { image: image5, id: 5 },
   { image: image6, id: 6 },
+  { image: image7, id: 7 },
+  { image: image8, id: 8 },
+  { image: image9, id: 9 },
 ];
 
 function CarouselC() {
