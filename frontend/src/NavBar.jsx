@@ -4,7 +4,7 @@ import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 
 const navigationLinks = [
-    { id: '1', title: 'CONTENIDO', link: '/contenidos' },
+    { id: '1', title: 'CONTENIDO' },
     { id: '2', title: 'SANTUARIO ROJIBLANCO', link: '/santuarioroji' },
     { id: '3', title: 'SUSCRIPCIONES', link: '/suscripcion' },
 ];
@@ -21,6 +21,7 @@ function NavBar() {
     const [auth, setAuth] = useState(false);
     const [message, setMessage] = useState('');
     const [name, setName] = useState('');
+    const [showContenidoMenu, setShowContenidoMenu] = useState(false);
 
     axios.defaults.withCredentials = true;
 
@@ -51,8 +52,12 @@ function NavBar() {
             .catch(err => console.log(err));
     };
 
+    const toggleContenidoMenu = () => {
+        setShowContenidoMenu(prev => !prev);
+    };
+
     return (
-        <div className='fixed left-0 right-0 z-50 bg-black flex items-center h-[50px] '>
+        <div className='fixed left-0 right-0 z-50 bg-black flex items-center h-[50px]'>
             <Link to={auth ? '/inicio-user' : '/'} className='text-white'>
                 <img src={logo1} alt='Logo' width={250} height={190} />
             </Link>
@@ -70,36 +75,68 @@ function NavBar() {
                         </li>
                     ))
                     : navigationLinks.map((navLink, index) => (
-                        <li key={index}>
-                            <Link
-                                to={navLink.link}
-                                className={`hover:underline ${location.pathname === navLink.link ? 'underline font-bold' : ''}`}
-                            >
-                                {navLink.title}
-                            </Link>
+                        <li key={index} className="relative">
+                            {navLink.title === 'CONTENIDO' ? (
+                                <>
+                                    <button
+                                        onClick={toggleContenidoMenu}
+                                        className='hover:underline focus:outline-none'
+                                    >
+                                        {navLink.title}
+                                    </button>
+
+                                    {showContenidoMenu && (
+                                        <div
+                                            className="fixed top-[50px] left-0 w-full bg-black bg-opacity-40 text-white p-4 z-50"
+                                            style={{ backdropFilter: 'blur(8px)' }}
+                                        >
+                                            <ul className="max-w-[1200px] mx-auto flex justify-start gap-8 text-lg">
+                                                <li>
+                                                    <Link
+                                                        to="/podcast"
+                                                        className="hover:underline"
+                                                        onClick={() => setShowContenidoMenu(false)}
+                                                    >
+                                                        1 - El Podcast
+                                                    </Link>
+                                                </li>
+                                                <li>
+                                                    <Link
+                                                        to="/femenil"
+                                                        className="hover:underline"
+                                                        onClick={() => setShowContenidoMenu(false)}
+                                                    >
+                                                        2 - Femenil
+                                                    </Link>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    )}
+                                </>
+                            ) : (
+                                <Link
+                                    to={navLink.link}
+                                    className={`hover:underline ${location.pathname === navLink.link ? 'underline font-bold' : ''}`}
+                                >
+                                    {navLink.title}
+                                </Link>
+                            )}
                         </li>
                     ))
                 }
             </ul>
-    
-            <ul className='flex gap-x-4 items-center  mr-3.5'>
-                {auth ? (
-                        
-                    
-                        
 
+            <ul className='flex gap-x-4 items-center mr-3.5'>
+                {auth ? (
                     <li className='ml-[230px]'>
-                       {name && (
+                        {name && (
                             <span className="text-white font-medium ">
                                 ¡Hola, {name}!
                             </span>
-                        )}     
-                        
-                          
-                        
+                        )}
                         <button
                             onClick={logout}
-                            className=' ml-[40px] bg-red-500 hover:bg-red-700 text-white px-3 py-1 rounded-sm '
+                            className='ml-[40px] bg-red-500 hover:bg-red-700 text-white px-3 py-1 rounded-sm '
                         >
                             Cerrar Sesión
                         </button>
@@ -118,7 +155,6 @@ function NavBar() {
                             <Link
                                 to='/registro'
                                 className='bg-[#7D191E] hover:bg-[#5D1217] text-white px-3 py-1 rounded-full'
-
                             >
                                 Regístrate
                             </Link>
@@ -128,8 +164,6 @@ function NavBar() {
             </ul>
         </div>
     );
-    
-    
 }
 
 export default NavBar;
