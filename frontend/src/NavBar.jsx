@@ -128,6 +128,74 @@ function NavBar() {
                             Chivas Femenil
                           </button>
                         </li>
+                        <li>
+                          <button
+                            className="hover:underline"
+                            onClick={() => {
+                              setShowContenidoMenu(false);
+                              navigate('/inicio-user');
+                              setTimeout(() => {
+                                const el = document.getElementById('contenido-nuevo');
+                                if (el) {
+                                  el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                }
+                              }, 500); 
+                            }}
+                          >
+                            Contenido Nuevo en CHIVASTV
+                          </button>
+                        </li>
+                        <li>
+                          <button
+                            className="hover:underline"
+                            onClick={() => {
+                              setShowContenidoMenu(false);
+                              navigate('/inicio-user');
+                              setTimeout(() => {
+                                const el = document.getElementById('partidos-pasados');
+                                if (el) {
+                                  el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                }
+                              }, 500); 
+                            }}
+                          >
+                            Partidos pasados
+                          </button>
+                        </li>
+                        <li>
+                          <button
+                            className="hover:underline"
+                            onClick={() => {
+                              setShowContenidoMenu(false);
+                              navigate('/inicio-user');
+                              setTimeout(() => {
+                                const el = document.getElementById('chivas-varonil');
+                                if (el) {
+                                  el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                }
+                              }, 500); 
+                            }}
+                          >
+                            Chivas Varonil
+                          </button>
+                        </li>
+                        <li>
+                          <button
+                            className="hover:underline"
+                            onClick={() => {
+                              setShowContenidoMenu(false);
+                              navigate('/inicio-user');
+                              setTimeout(() => {
+                                const el = document.getElementById('roomies-podcast');
+                                if (el) {
+                                  el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                }
+                              }, 500); 
+                            }}
+                          >
+                            Roomies El Podcast
+                          </button>
+                        </li>
                       </ul>
                     </div>
                   )}

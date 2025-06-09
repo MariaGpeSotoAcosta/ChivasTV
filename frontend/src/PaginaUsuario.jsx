@@ -3,6 +3,10 @@ import { useNavigate } from 'react-router-dom'
 import Hero from './Hero'
 import CarouselC from './carouselC'
 import CarouselC2 from './carouselC2';
+import Hero2 from './Hero2'
+import CarouselC3 from './carouselC3'
+import CarouselC4 from './carouselC4';
+import CarouselC5 from './carouselC5';
 import './index.css'
 import {Link} from 'react-router-dom'
 import axios from 'axios'
@@ -44,7 +48,7 @@ function App() {
           }
 
         })
-      .catch(err => console.log(err));
+      .then(err => console.log(err));
     
 },[]);
 
@@ -53,20 +57,28 @@ function App() {
   return (
     <div className="relative min-h-screen overflow-hidden">
       {auth ? (
-        <div>
-          <div className="app-container relative top-[50px]">
-            <Hero />
-            <div className="bg-black h-[30px]" />
-            <CarouselC />
-            <div className="bg-black h-[5px]" />
-            <CarouselC2 />
-          </div>
+        <div className="app-container relative top-[50px]">
+          {/* Sección original */}
+          <Hero />
+          <div className="bg-black h-[30px]" />
+          <CarouselC /> {/* El Podcast */}
+          <div className="bg-black h-[5px]" />
+          <CarouselC2 /> {/* Chivas Femenil */}
+          <div className="bg-black h-[5px]" />
+          <Hero2 /> {/* Contenido Nuevo */}
+          <div className="bg-black h-[5px]" />
+          <CarouselC3 /> {/* Chivas Varonil */}
+          <div className="bg-black h-[5px]" />
+          <CarouselC4 /> {/* Partidos Pasados */}
+          <div className="bg-black h-[5px]" />
+          <CarouselC5 /> {/* Roomies el Podcast */}
           <div className="bg-white h-[60px]" />
         </div>
       ) : (
-        <div className='mt-[300px]'>
+        <div className="mt-[300px] text-center text-white">
           {message}
-          <Link to='/iniciarsesion'>Login</Link>
+          <br />
+          <Link to="/iniciarsesion" className="text-blue-500 underline">Iniciar sesión</Link>
         </div>
       )}
     </div>

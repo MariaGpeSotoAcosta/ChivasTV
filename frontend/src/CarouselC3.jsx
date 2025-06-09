@@ -22,7 +22,7 @@ const carouselItems = [
 ];
 
 
-function CarouselC2() {
+function CarouselC3() {
   const scrollRef = useRef(null);
   const [showLeft, setShowLeft] = useState(false);
   const [showRight, setShowRight] = useState(true);
@@ -71,8 +71,8 @@ function CarouselC2() {
         {/* Degradado inferior */}
         <div className="absolute bottom-0 w-full h-32 bg-gradient-to-t from-black via-transparent to-transparent z-30" />
       </div>
-      {/* Imagen titulo CHIVAS FEMENIL con id para scroll */}
-      <div id="chivas-femenil" className="absolute top-5 right-12 z-30">
+      {/* Imagen titulo PARTIDOS PASADOS con id para scroll */}
+      <div id="partidos-pasados" className="absolute top-5 right-12 z-30">
         <img src={chivasFemenil} alt="Chivas Femenil"
           className="w-[270px] h-auto object-contain"
         />
@@ -127,4 +127,4 @@ function CarouselC2() {
   );
 }
 
-export default CarouselC2;
+export default CarouselC3;

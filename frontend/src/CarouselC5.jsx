@@ -1,28 +1,32 @@
 import React, { useRef, useState, useEffect } from "react";
-import { Link } from "react-router-dom"; // Import Link for routing
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa"; //para las flechas
+import { Link } from "react-router-dom";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
-//imagenes
-import image1 from "./assets/chivas2.jpg";
-import image2 from "./assets/chivas3.jpg";
-import image3 from "./assets/chivas4.jpg";
-import image4 from "./assets/chivas5.jpg";
-import image5 from "./assets/chivas6.jpg";
-import image6 from "./assets/chivas7.jpg";
-import fondo from "./assets/fondoCarousel2.png";
-import chivasFemenil from "./assets/chivasFemenil.png";
+// Imágenes
+import image1 from "./assets/entrevista1.png";
+import image2 from "./assets/entrevista2.png";
+import image3 from "./assets/entrevista3.png";
+import image4 from "./assets/entrevista4.png";
+import image5 from "./assets/entrevista5.png";
+import image6 from "./assets/entrevista6.png";
+import image7 from "./assets/entrevista7.png";
+import image8 from "./assets/entrevista8.png";
+import image9 from "./assets/entrevista9.png";
+import elPodcast from "./assets/elPodcast.jpg";
 
 const carouselItems = [
-  { image: image1, title: "PARTIDO 1", id: 1 },
-  { image: image2, title: "ENTREVISTA", id: 2 },
-  { image: image3, title: "MEJORES JUGADAS", id: 3 },
-  { image: image4, title: "PARTIDO 2", id: 4 },
-  { image: image5, title: "TRAS BAMBALINAS", id: 5 },
-  { image: image6, title: "HISTORIAS", id: 6 },
+  { image: image1, id: 1 },
+  { image: image2, id: 2 },
+  { image: image3, id: 3 },
+  { image: image4, id: 4 },
+  { image: image5, id: 5 },
+  { image: image6, id: 6 },
+  { image: image7, id: 7 },
+  { image: image8, id: 8 },
+  { image: image9, id: 9 },
 ];
 
-
-function CarouselC2() {
+function CarouselC5() {
   const scrollRef = useRef(null);
   const [showLeft, setShowLeft] = useState(false);
   const [showRight, setShowRight] = useState(true);
@@ -53,7 +57,6 @@ function CarouselC2() {
     if (!container) return;
 
     updateScrollButtons();
-
     container.addEventListener("scroll", updateScrollButtons);
 
     return () => {
@@ -62,23 +65,17 @@ function CarouselC2() {
   }, []);
 
   return (
-    <div className="relative w-full h-[430px]">
-      {/* Fondo */}
-      <div className="absolute inset-0">
-        <img src={fondo} className="w-full h-full object-cover" alt="background" />
-        {/* Degradado superior */}
-        <div className="absolute top-0 left-0 w-full h-52 bg-gradient-to-b from-black/100 to-transparent z-30" />
-        {/* Degradado inferior */}
-        <div className="absolute bottom-0 w-full h-32 bg-gradient-to-t from-black via-transparent to-transparent z-30" />
-      </div>
-      {/* Imagen titulo CHIVAS FEMENIL con id para scroll */}
-      <div id="chivas-femenil" className="absolute top-5 right-12 z-30">
-        <img src={chivasFemenil} alt="Chivas Femenil"
-          className="w-[270px] h-auto object-contain"
+    <div className="relative w-full bg-black" id="roomies-podcast">
+      {/* Imagen EL PODCAST con ID para scroll */}
+      <div className="p-2 ml-12">
+        <img
+          src={elPodcast}
+          alt="El Podcast"
+          className="w-[200px] h-auto object-contain"
         />
       </div>
 
-      <div className="relative z-10 py-8 top-15">
+      <div className="relative z-10 py-8">
         {/* Flecha izquierda */}
         {showLeft && (
           <button
@@ -89,18 +86,21 @@ function CarouselC2() {
           </button>
         )}
 
-        {/* Carrusel */}
+        {/* Carrusel de imágenes */}
         <div
           ref={scrollRef}
           className="flex overflow-x-auto space-x-6 px-16 scroll-smooth [&::-webkit-scrollbar]:hidden"
         >
           {carouselItems.map((item, index) => (
             <div key={index} className="flex flex-col items-center flex-shrink-0">
-              <Link to={`/video/${item.id}`} className="relative w-[380px] h-[220px] group">
+              <Link
+                to={`/video/${item.id}`}
+                className="relative w-[270px] h-[340px] group"
+              >
                 <img
                   src={item.image}
                   alt={`Slide ${index}`}
-                  className="w-full h-full object-cover rounded-xl cursor-pointer shadow-lg  group-hover:scale-95 transition-transform duration-300"
+                  className="w-full h-full object-cover rounded-xl cursor-pointer shadow-lg group-hover:scale-95 transition-transform duration-300"
                 />
                 <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 w-[90%] bg-indigo-800/90 rounded-[40px] flex items-center justify-center py-2">
                   <p className="text-white text-xl font-bold">
@@ -108,7 +108,6 @@ function CarouselC2() {
                   </p>
                 </div>
               </Link>
-              <h3 className="mt-3 text-white text-xl font-bold">{item.title}</h3>
             </div>
           ))}
         </div>
@@ -127,4 +126,4 @@ function CarouselC2() {
   );
 }
 
-export default CarouselC2;
+export default CarouselC5;
