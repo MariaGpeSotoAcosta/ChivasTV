@@ -1,8 +1,8 @@
 import React, { useRef, useState, useEffect } from "react";
-import { Link } from "react-router-dom"; // Import Link for routing
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa"; //para las flechas
+import { Link } from "react-router-dom";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
-//imagenes
+// Imágenes
 import image1 from "./assets/entrevista1.png";
 import image2 from "./assets/entrevista2.png";
 import image3 from "./assets/entrevista3.png";
@@ -57,7 +57,6 @@ function CarouselC() {
     if (!container) return;
 
     updateScrollButtons();
-
     container.addEventListener("scroll", updateScrollButtons);
 
     return () => {
@@ -66,8 +65,8 @@ function CarouselC() {
   }, []);
 
   return (
-    <div className="relative w-full bg-black">
-      {/* Imagen EL PODCAST arriba, izquierda */}
+    <div className="relative w-full bg-black" id="el-podcast">
+      {/* Imagen EL PODCAST con ID para scroll */}
       <div className="p-2 ml-12">
         <img
           src={elPodcast}
@@ -87,22 +86,25 @@ function CarouselC() {
           </button>
         )}
 
-        {/* Carrusel */}
+        {/* Carrusel de imágenes */}
         <div
           ref={scrollRef}
           className="flex overflow-x-auto space-x-6 px-16 scroll-smooth [&::-webkit-scrollbar]:hidden"
         >
           {carouselItems.map((item, index) => (
             <div key={index} className="flex flex-col items-center flex-shrink-0">
-              <Link to={`/video/${item.id}`} className="relative w-[270px] h-[340px] group">
+              <Link
+                to={`/video/${item.id}`}
+                className="relative w-[270px] h-[340px] group"
+              >
                 <img
                   src={item.image}
                   alt={`Slide ${index}`}
-                  className="w-full h-full object-cover rounded-xl cursor-pointer shadow-lg  group-hover:scale-95 transition-transform duration-300"
+                  className="w-full h-full object-cover rounded-xl cursor-pointer shadow-lg group-hover:scale-95 transition-transform duration-300"
                 />
                 <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 w-[90%] bg-indigo-800/90 rounded-[40px] flex items-center justify-center py-2">
                   <p className="text-white text-xl font-bold">
-                    SUSCRÍBETE PARA VER 
+                    SUSCRÍBETE PARA VER
                   </p>
                 </div>
               </Link>

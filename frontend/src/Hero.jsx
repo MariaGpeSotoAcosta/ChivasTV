@@ -44,8 +44,7 @@ function Hero() {
             }`}
           />
         ))}
-        {/* Degradado inferior */}
-        <div className="absolute bottom-0 w-full h-32 bg-gradient-to-t from-black via-transparent to-transparent z-20" />
+        <div/>
       </div>
 
       {/* Flechas */}

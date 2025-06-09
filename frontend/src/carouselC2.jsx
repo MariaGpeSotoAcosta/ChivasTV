@@ -68,11 +68,11 @@ function CarouselC2() {
         <img src={fondo} className="w-full h-full object-cover" alt="background" />
         {/* Degradado superior */}
         <div className="absolute top-0 left-0 w-full h-52 bg-gradient-to-b from-black/100 to-transparent z-30" />
-      {/* Degradado inferior */}
+        {/* Degradado inferior */}
         <div className="absolute bottom-0 w-full h-32 bg-gradient-to-t from-black via-transparent to-transparent z-30" />
       </div>
-      {/* Imagen titulo CHIVAS FEMENIL */}
-      <div className="absolute top-5 right-12 z-30">
+      {/* Imagen titulo CHIVAS FEMENIL con id para scroll */}
+      <div id="chivas-femenil" className="absolute top-5 right-12 z-30">
         <img src={chivasFemenil} alt="Chivas Femenil"
           className="w-[270px] h-auto object-contain"
         />
