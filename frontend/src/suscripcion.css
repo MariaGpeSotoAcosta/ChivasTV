@@ -28,11 +28,11 @@ body {
 .centered-logo {
     display: flex;
     justify-content: center;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
 }
 
 .centered-logo-img {
-    max-width: 100px; /* Adjust this value to control the size */
+    max-width: 80px; /* Adjust this value to control the size */
     height: auto;
 }
 
@@ -65,7 +65,7 @@ body {
 
 .cuadro-gradiente {
     width: 300px;        /* Ajusta el tamaño como gustes */
-    height: 400px;
+    height: 440px;
     border-radius: 20px; /* Esquinas redondeadas */
     background: linear-gradient(to top, #e30f0f, #001f3f); /* Rojo a azul oscuro - Predeterminado */
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Sombras opcionales */
@@ -276,4 +276,16 @@ body {
     padding: 20px 50px; /* Ajustar el padding horizontal para mantener el texto en una línea */
     white-space: nowrap; /* Evitar que el texto se divida en múltiples líneas */
     font-size: 15px; /* Ligeramente más pequeño para asegurar que quepa */
+}
+
+
+body {
+  overflow: hidden;
+  margin: 0;
+}
+
+.suscripcion-container {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
 }
