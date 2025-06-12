@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import viteLogo from './assets/logochivas.png';
-import Fondo from './assets/chivas1fondo.png';
+import Fondo from './assets/chivasBandera.jpg';
 import axios from 'axios';
 import './index.css';
 
@@ -34,7 +34,7 @@ function RegistroNegocioChivas() {
   return (
     <div className="relative min-h-screen overflow-hidden">
       <img
-        className="fixed -z-20 bg-[#05022E] w-[1653.50px] h-[1106.88px] right-[230px] pointer-events-none"
+        className="fixed -z-20 bg-[#05022E] w-[1653.50px] h-[806.88px] right-[230px] pointer-events-none"
         src={Fondo}
         alt="background"
       />
@@ -45,13 +45,16 @@ function RegistroNegocioChivas() {
 
       <div className="app-container relative top-[120px] left-[490px]">
         <div className="text-center">
-          <img src={viteLogo} className="logo mx-auto w-30" alt="Logo" />
+          <img src={viteLogo} className="logo mx-auto w-20" alt="Logo" />
         </div>
 
         <h1 className="text-4xl font-bold text-center my-6 text-white">Registrar Negocio</h1>
 
         <div className="card max-w-sm mx-auto backdrop-blur-md p-6 rounded-lg">
           <form onSubmit={handleSubmit}>
+            <label htmlFor="nombreNegocio" className="block text-sm font-normal text-white mb-1">
+              Nombre del Negocio
+            </label>
             <input
               type="text"
               placeholder="Nombre del Negocio"
@@ -59,6 +62,9 @@ function RegistroNegocioChivas() {
               onChange={e => setValues({ ...values, nombreNegocio: e.target.value })}
               className="rounded bg-white w-full py-2 px-4 mb-3"
             />
+            <label htmlFor="categoria" className="block text-sm font-normal text-white mb-1">
+              Categoría
+            </label>
             <input
               type="text"
               placeholder="Categoría (Ej. Restaurante, Tienda)"
@@ -66,6 +72,9 @@ function RegistroNegocioChivas() {
               onChange={e => setValues({ ...values, categoria: e.target.value })}
               className="rounded bg-white w-full py-2 px-4 mb-3"
             />
+            <label htmlFor="ubicacion" className="block text-sm font-normal text-white mb-1">
+              Ubicación
+            </label>
             <input
               type="text"
               placeholder="Ubicación"
@@ -73,6 +82,9 @@ function RegistroNegocioChivas() {
               onChange={e => setValues({ ...values, ubicacion: e.target.value })}
               className="rounded bg-white w-full py-2 px-4 mb-3"
             />
+            <label htmlFor="contacto" className="block text-sm font-normal text-white mb-1">
+              Contacto
+            </label>
             <input
               type="text"
               placeholder="Contacto (Teléfono o Email)"
@@ -80,12 +92,15 @@ function RegistroNegocioChivas() {
               onChange={e => setValues({ ...values, contacto: e.target.value })}
               className="rounded bg-white w-full py-2 px-4 mb-3"
             />
+            <label htmlFor="descripcion" className="block text-sm font-normal text-white mb-1">
+              Descripción del Negocio
+            </label>
             <textarea
               placeholder="Descripción del negocio"
               value={values.descripcion}
               onChange={e => setValues({ ...values, descripcion: e.target.value })}
               className="rounded bg-white w-full py-2 px-4 mb-3"
-              rows="3"
+              rows="1"
             ></textarea>
 
             <button
