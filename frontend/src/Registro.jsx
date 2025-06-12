@@ -57,7 +57,7 @@ function App() {
         <p className="text-white text-sm mt-4 max-w-xs mx-auto text-center">
           Completa el formulario de registro para crear tu cuenta y poder tener acceso al contenido gratuito.
         </p>
-        <div className="card max-w-md mx-auto backdrop-blur-md p-6 rounded-lg">
+        <div className="card max-w-sm mx-auto backdrop-blur-md p-6 rounded-lg">
           <form onSubmit={handleSubmit}>
             <div>
               <label htmlFor="nombre" className="block text-sm font-normal text-white mb-1">

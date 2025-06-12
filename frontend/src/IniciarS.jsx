@@ -30,7 +30,7 @@ function App() {
 
   return (
     <div className="relative min-h-screen overflow-hidden  ">
-          <img className="fixed -z-20 bg-[#05022E] w-[1350.50px] h-[800.88px] right-[230px] pointer-events-none" src= {Fondo} alt="background"   />
+          <img className="fixed -z-20 bg-[#05022E] w-[1350.50px] h-[830.88px] right-[250px] -top-7 pointer-events-none" src= {Fondo} alt="background"   />
           <div
             className="fixed pointer-events-none -top-[200px] left-[1060px] w-[1200px] h-[1550px] -z-20 rotate-[8.85deg] origin-top-left bg-gradient-to-b from-[#05022E] via-[#450a0a] to-[#dc2626]"
           />
