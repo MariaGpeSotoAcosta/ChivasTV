@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 import { useNavigate } from 'react-router-dom'
 import viteLogo from './assets/logochivas.png'
-import Fondo from './assets/chivas1fondo.png'
+import Fondo from './assets/iniciarSesionFondo.png'
 import axios from 'axios'
 import './index.css'
 import {Link} from 'react-router-dom'
@@ -30,25 +30,22 @@ function App() {
 
   return (
     <div className="relative min-h-screen overflow-hidden  ">
-          
-          <img className="fixed -z-20 bg-[#05022E] w-[1653.50px] h-[1106.88px] right-[230px] pointer-events-none" src= {Fondo} alt="background"   />
-         
-          <div 
+          <img className="fixed -z-20 bg-[#05022E] w-[1350.50px] h-[800.88px] right-[230px] pointer-events-none" src= {Fondo} alt="background"   />
+          <div
             className="fixed pointer-events-none -top-[200px] left-[1060px] w-[1200px] h-[1550px] -z-20 rotate-[8.85deg] origin-top-left bg-gradient-to-b from-[#05022E] via-[#450a0a] to-[#dc2626]"
           />
-              
-        
+          <div className="fixed pointer-events-none -top-[200px] left-[1060px] w-[1200px] h-[1550px] -z-20 rotate-[8.85deg] origin-top-left bg-gradient-to-b from-[#05022E] via-[#450a0a] to-[#dc2626]" />
 
-      <div className="app-container relative top-[120px] left-[490px]">
+      <div className="app-container relative top-[160px] left-[490px]">
         <div className="text-center">
           <a target="_blank" rel="noopener noreferrer">
-            <img src={viteLogo} className="logo mx-auto w-40" alt="Vite logo" />
+            <img src={viteLogo} className="logo mx-auto w-30" alt="Vite logo" />
           </a>
         </div>
         
         <h1 className="text-4xl font-bold text-center my-6 text-white">Iniciar Sesión</h1>
         
-        <div className="card max-w-md mx-auto bg-white/10 backdrop-blur-md p-6 rounded-lg">
+        <div className="card max-w-sm mx-auto  p-6 rounded-lg">
         <form onSubmit = {handleSubmit}>
         <div className = ''>
                 <label htmlFor= "email"></label>
@@ -72,9 +69,12 @@ function App() {
 
           </form>
 
-          
-          <p className="text-center mt-4 text-white/80">
-            Edit <code className="bg-black/20 px-1 rounded">src/IniciarS.jsx</code>
+
+          <p className="text-center mt-4 text-blue-900/90">
+            ¿No tienes cuenta? |{" "}
+            <Link to="/registro" className="underline hover:text-blue-800">
+              Regístrate
+            </Link>
           </p>
         </div>
       </div>
