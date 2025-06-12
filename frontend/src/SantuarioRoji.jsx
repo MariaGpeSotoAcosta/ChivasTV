@@ -40,17 +40,17 @@ function RegistroNegocioChivas() {
       />
 
       <div
-        className="fixed pointer-events-none -top-[200px] left-[1060px] w-[1200px] h-[1550px] -z-20 rotate-[8.85deg] origin-top-left bg-gradient-to-b from-[#05022E] via-[#450a0a] to-[#dc2626]"
+        className="fixed pointer-events-none -top-[200px] left-[1060px] w-[1200px] h-[1550px] -z-20 rotate-[8.85deg] origin-top-left bg-gradient-to-b from-[#001f3f] via-[#2d6a3f] to-[#80c531] "
       />
 
       <div className="app-container relative top-[120px] left-[490px]">
         <div className="text-center">
-          <img src={viteLogo} className="logo mx-auto w-40" alt="Logo" />
+          <img src={viteLogo} className="logo mx-auto w-30" alt="Logo" />
         </div>
 
         <h1 className="text-4xl font-bold text-center my-6 text-white">Registrar Negocio</h1>
 
-        <div className="card max-w-md mx-auto bg-white/10 backdrop-blur-md p-6 rounded-lg">
+        <div className="card max-w-sm mx-auto backdrop-blur-md p-6 rounded-lg">
           <form onSubmit={handleSubmit}>
             <input
               type="text"
