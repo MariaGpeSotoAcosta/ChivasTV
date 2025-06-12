@@ -42,20 +42,26 @@ function App() {
             <img src={viteLogo} className="logo mx-auto w-30" alt="Vite logo" />
           </a>
         </div>
-        
-        <h1 className="text-4xl font-bold text-center my-6 text-white">Iniciar Sesión</h1>
-        
+        <h1 className="text-4xl font-bold text-center my-6 text-white">Iniciar Sesión</h1>   
         <div className="card max-w-sm mx-auto  p-6 rounded-lg">
         <form onSubmit = {handleSubmit}>
         <div className = ''>
-                <label htmlFor= "email"></label>
+                <label htmlFor= 
+                "email"
+                  className="block text-sm font-normal text-white mb-1"
+                  >
+                    Correo electrónico
+                </label>
+
                 <input type="email" placeholder='Correo electrónico' name = 'email'
                 onChange={e => setValues({...values,email:e.target.value})} className = 'rounded bg-white w-full py-2 px-4'/>
                 
             </div>
 
             <div className = 'mt-3'>
-                <label htmlFor= "contraseña"></label>
+                <label htmlFor= "contraseña" className="block text-sm font-normal text-white mb-1">
+                    Contraseña
+                </label>
                 <input type="password" placeholder='Contraseña' name = 'contraseña'
                 onChange={e => setValues({...values,contraseña:e.target.value})} className = 'rounded bg-white w-full py-2 px-4'/>
                 

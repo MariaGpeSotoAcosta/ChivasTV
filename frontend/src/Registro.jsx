@@ -5,6 +5,7 @@ import Fondo from './assets/chivas1fondo.png'
 import axios from 'axios'
 import './index.css'
 import Fondo2 from './assets/chivas3.jpg'
+import {Link} from 'react-router-dom'
 
 function App() {
   const navigate = useNavigate();
@@ -45,19 +46,23 @@ function App() {
         className="fixed pointer-events-none -top-[200px] left-[1060px] w-[1200px] h-[1550px] -z-20 rotate-[8.85deg] origin-top-left bg-gradient-to-b from-[#05022E] via-[#450a0a] to-[#dc2626]"
       />
 
-      <div className="app-container relative top-[160px] left-[490px]">
+      <div className="app-container relative top-[120px] left-[490px]">
         <div className="text-center">
           <a target="_blank" rel="noopener noreferrer">
-            <img src={viteLogo} className="logo mx-auto w-30" alt="Vite logo" />
+            <img src={viteLogo} className="logo mx-auto w-25" alt="Vite logo" />
           </a>
         </div>
 
-        <h1 className="text-4xl font-bold text-center my-6 text-white">Registro</h1>
-
-        <div className="card max-w-sm mx-auto backdrop-blur-md p-6 rounded-lg">
+        <h1 className="text-4xl font-bold text-center my-6 text-white">Crea tu cuenta</h1>
+        <p className="text-white text-sm mt-4 max-w-xs mx-auto text-center">
+          Completa el formulario de registro para crear tu cuenta y poder tener acceso al contenido gratuito.
+        </p>
+        <div className="card max-w-md mx-auto backdrop-blur-md p-6 rounded-lg">
           <form onSubmit={handleSubmit}>
             <div>
-              <label htmlFor="nombre"><strong></strong></label>
+              <label htmlFor="nombre" className="block text-sm font-normal text-white mb-1">
+                Nombre
+              </label>
               <input
                 type="text"
                 placeholder='Nombre'
@@ -67,7 +72,9 @@ function App() {
               />
             </div>
             <div className='mt-3'>
-              <label htmlFor="email"><strong></strong></label>
+              <label htmlFor="email" className="block text-sm font-normal text-white mb-1">
+                Correo electrónico
+              </label>
               <input
                 type="email"
                 placeholder='Correo electrónico'
@@ -77,7 +84,9 @@ function App() {
               />
             </div>
             <div className='mt-3'>
-              <label htmlFor="contraseña"><strong></strong></label>
+              <label htmlFor="contraseña" className="block text-sm font-normal text-white mb-1">
+                Contraseña
+              </label>
               <input
                 type="password"
                 placeholder='Contraseña'
@@ -91,10 +100,18 @@ function App() {
             >
               Continuar
             </button>
+            
+            <p className="text-center mt-4 text-blue-900/90">
+              ¿Ya tienes cuenta? |{" "}
+              <Link to="/iniciarsesion" className="underline hover:text-blue-800">
+                Inicia sesión
+              </Link>
+            </p>
           </form>
-
+          
           
         </div>
+        
       </div>
 
       {showPopup && (
