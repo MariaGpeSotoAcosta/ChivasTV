@@ -186,14 +186,14 @@ function NavBar() {
                               setShowContenidoMenu(false);
                               navigate('/inicio-user');
                               setTimeout(() => {
-                                const el = document.getElementById('roomies-podcast');
+                                const el = document.getElementById('Raices');
                                 if (el) {
                                   el.scrollIntoView({ behavior: 'smooth', block: 'start' });
                                 }
                               }, 500); 
                             }}
                           >
-                            Roomies El Podcast
+                            Raices
                           </button>
                         </li>
                       </ul>

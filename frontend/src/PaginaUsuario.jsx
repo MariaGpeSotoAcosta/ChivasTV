@@ -55,7 +55,7 @@ function App() {
 
 
   return (
-    <div className="relative min-h-screen overflow-hidden">
+    <div className="relative min-h-screen overflow-hidden bg-black">
       {auth ? (
         <div className="app-container relative top-[50px]">
           {/* Sección original */}
@@ -72,7 +72,7 @@ function App() {
           <CarouselC4 /> {/* Partidos Pasados */}
           <div className="bg-black h-[5px]" />
           <CarouselC5 /> {/* Roomies el Podcast */}
-          <div className="bg-white h-[60px]" />
+          <div className="bg-black h-[60px]" />
         </div>
       ) : (
         <div className="mt-[300px] text-center text-white">

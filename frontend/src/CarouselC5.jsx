@@ -65,8 +65,8 @@ function CarouselC5() {
   }, []);
 
   return (
-    <div className="relative w-full bg-black" id="roomies-podcast">
-      {/* Imagen EL PODCAST con ID para scroll */}
+    <div className="relative w-full bg-black" id="Raices">
+      {/* Imagen RAICES con ID para scroll */}
       <div className="p-2 ml-12">
         <img
           src={elPodcast}
