@@ -118,7 +118,7 @@ function NavBar() {
                               setShowContenidoMenu(false);
                               navigate('/inicio-user');
                               setTimeout(() => {
-                                const el = document.getElementById('fin-carousel1');
+                                const el = document.getElementById('chivas-femenil');
                                 if (el) {
                                   el.scrollIntoView({ behavior: 'smooth', block: 'start' });
                                 }
