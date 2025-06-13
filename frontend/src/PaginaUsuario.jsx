@@ -16,9 +16,9 @@ import axios from 'axios'
 function App() {
   const navigate = useNavigate();
   axios.defaults.withCredentials = true;
-  const [auth,setAuth] = useState(true);
+  const [auth,setAuth] = useState(false);
   const [message,setMessage] = useState('')
-  const [nombre,setName]= useState('Ana')
+  const [nombre,setName]= useState('')
 
   const handleLogout = () => {
     axios.get('http://localhost:3000/logout')
