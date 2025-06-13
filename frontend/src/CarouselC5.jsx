@@ -12,7 +12,7 @@ import image6 from "./assets/entrevista6.png";
 import image7 from "./assets/entrevista7.png";
 import image8 from "./assets/entrevista8.png";
 import image9 from "./assets/entrevista9.png";
-import elPodcast from "./assets/elPodcast.jpg";
+import RaicesChivas from "./assets/RaicesChivas.png";
 
 const carouselItems = [
   { image: image1, id: 1 },
@@ -69,9 +69,9 @@ function CarouselC5() {
       {/* Imagen RAICES con ID para scroll */}
       <div className="p-2 ml-12">
         <img
-          src={elPodcast}
-          alt="El Podcast"
-          className="w-[200px] h-auto object-contain"
+          src={RaicesChivas}
+          alt="Raíces"
+          className="w-[130px] h-auto object-contain"
         />
       </div>
 

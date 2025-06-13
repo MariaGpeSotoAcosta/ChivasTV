@@ -10,7 +10,7 @@ import image4 from "./assets/chivas5.jpg";
 import image5 from "./assets/chivas6.jpg";
 import image6 from "./assets/chivas7.jpg";
 import fondo from "./assets/fondoCarousel2.png";
-import chivasFemenil from "./assets/chivasFemenil.png";
+import chivasFemenil from "./assets/chivasVaronil.png";
 
 const carouselItems = [
   { image: image1, title: "PARTIDO 1", id: 1 },

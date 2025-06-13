@@ -6,7 +6,7 @@ import CarouselC2 from './carouselC2'
 import Hero2 from './Hero2'
 import CarouselC3 from './carouselC3'
 import CarouselC4 from './carouselC4'
-import CarouselC5 from './carouselC5'
+import CarouselC5 from './CarouselC5';
 
 import './index.css'
 import {Link} from 'react-router-dom'
