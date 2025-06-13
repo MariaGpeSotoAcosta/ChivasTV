@@ -152,14 +152,14 @@ function NavBar() {
                               setShowContenidoMenu(false);
                               navigate('/inicio-user');
                               setTimeout(() => {
-                                const el = document.getElementById('partidos-pasados');
+                                const el = document.getElementById('leyendas');
                                 if (el) {
                                   el.scrollIntoView({ behavior: 'smooth', block: 'start' });
                                 }
                               }, 500); 
                             }}
                           >
-                            Partidos Pasados
+                            Leyendas
                           </button>
                         </li>
                         <li>

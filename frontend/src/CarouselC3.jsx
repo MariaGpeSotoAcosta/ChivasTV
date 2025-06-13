@@ -3,22 +3,20 @@ import { Link } from "react-router-dom"; // Import Link for routing
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa"; //para las flechas
 
 //imagenes
-import image1 from "./assets/chivas2.jpg";
-import image2 from "./assets/chivas3.jpg";
-import image3 from "./assets/chivas4.jpg";
-import image4 from "./assets/chivas5.jpg";
-import image5 from "./assets/chivas6.jpg";
-import image6 from "./assets/chivas7.jpg";
-import fondo from "./assets/fondoCarousel2.png";
-import chivasFemenil from "./assets/chivasFemenil.png";
+import image1 from "./assets/C3.1.png";
+import image2 from "./assets/C3.2.png";
+import image3 from "./assets/C3.3.png";
+import image4 from "./assets/C3.4.png";
+import image5 from "./assets/C3.5.png";
+import fondo from "./assets/fondoCarousel3.png";
+import ChivasLeyendas from "./assets/ChivasLeyendas.png";
 
 const carouselItems = [
-  { image: image1, title: "PARTIDO 1", id: 1 },
-  { image: image2, title: "ENTREVISTA", id: 2 },
-  { image: image3, title: "MEJORES JUGADAS", id: 3 },
-  { image: image4, title: "PARTIDO 2", id: 4 },
-  { image: image5, title: "TRAS BAMBALINAS", id: 5 },
-  { image: image6, title: "HISTORIAS", id: 6 },
+  { image: image1, title: "Paulo 'Tilón' Chávez", id: 1 },
+  { image: image2, title: "Ignacio 'Nacho' Calderón", id: 2 },
+  { image: image3, title: "Ramón Ramírez", id: 3 },
+  { image: image4, title: "Ramón Morales", id: 4 },
+  { image: image5, title: "Camilo Romero", id: 5 },
 ];
 
 
@@ -72,9 +70,9 @@ function CarouselC3() {
         <div className="absolute bottom-0 w-full h-32 bg-gradient-to-t from-black via-transparent to-transparent z-30" />
       </div>
       {/* Imagen titulo PARTIDOS PASADOS con id para scroll */}
-      <div id="partidos-pasados" className="absolute top-5 right-12 z-30">
-        <img src={chivasFemenil} alt="Chivas Femenil"
-          className="w-[270px] h-auto object-contain"
+      <div id="leyendas" className="absolute top-5 right-12 z-30">
+        <img src={ChivasLeyendas} alt="Leyendas"
+          className="w-[180px] h-auto object-contain"
         />
       </div>
 
