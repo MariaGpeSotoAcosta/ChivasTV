@@ -111,7 +111,6 @@ function CarouselC() {
             </div>
           ))}
         </div>
-
         {/* Flecha derecha */}
         {showRight && (
           <button
