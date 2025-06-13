@@ -142,7 +142,7 @@ function NavBar() {
                               }, 500); 
                             }}
                           >
-                            Contenido Nuevo en CHIVASTV
+                            Novedades
                           </button>
                         </li>
                         <li>
@@ -159,7 +159,7 @@ function NavBar() {
                               }, 500); 
                             }}
                           >
-                            Partidos pasados
+                            Partidos Pasados
                           </button>
                         </li>
                         <li>
@@ -193,7 +193,7 @@ function NavBar() {
                               }, 500); 
                             }}
                           >
-                            Raices
+                            Raíces
                           </button>
                         </li>
                       </ul>

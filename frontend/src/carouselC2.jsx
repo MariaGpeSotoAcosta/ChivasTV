@@ -3,22 +3,22 @@ import { Link } from "react-router-dom"; // Import Link for routing
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa"; //para las flechas
 
 //imagenes
-import image1 from "./assets/chivas2.jpg";
-import image2 from "./assets/chivas3.jpg";
-import image3 from "./assets/chivas4.jpg";
-import image4 from "./assets/chivas5.jpg";
-import image5 from "./assets/chivas6.jpg";
-import image6 from "./assets/chivas7.jpg";
+import image1 from "./assets/c2.4.png";
+import image2 from "./assets/c2.2.png";
+import image3 from "./assets/c2.3.png";
+import image4 from "./assets/c2.1.png";
+import image5 from "./assets/c2.5.png";
+import image6 from "./assets/c2.6.png";
 import fondo from "./assets/fondoCarousel2.png";
 import chivasFemenil from "./assets/chivasFemenil.png";
 
 const carouselItems = [
-  { image: image1, title: "PARTIDO 1", id: 1 },
-  { image: image2, title: "ENTREVISTA", id: 2 },
-  { image: image3, title: "MEJORES JUGADAS", id: 3 },
-  { image: image4, title: "PARTIDO 2", id: 4 },
-  { image: image5, title: "TRAS BAMBALINAS", id: 5 },
-  { image: image6, title: "HISTORIAS", id: 6 },
+  { image: image1, title: "Santos vs Chivas", id: 1 },
+  { image: image2, title: "León vs Chivas | Jornada 13", id: 2 },
+  { image: image3, title: "Mazatlan vs Chivas", id: 3 },
+  { image: image4, title: "América VS Chivas | Semifinal", id: 4 },
+  { image: image5, title: "Summer Cup 2024", id: 5 },
+  { image: image6, title: "Chivas vs América | Jornada 11", id: 6 },
 ];
 
 
